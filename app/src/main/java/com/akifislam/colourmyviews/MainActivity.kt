@@ -4,6 +4,7 @@ import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,15 +33,15 @@ class MainActivity : AppCompatActivity() {
     private fun makeColored(view: View) {
         when (view.id) {
             // Boxes using Color class colors for background
-            R.id.box_one -> view.setBackgroundColor(Color.DKGRAY)
-            R.id.box_two -> view.setBackgroundColor(Color.GRAY)
-
+            R.id.box_one ->
+                view.setBackgroundColor(Color.CYAN)
+            R.id.box_two -> view.setBackgroundColor(Color.MAGENTA)
             // Boxes using Android color resources for background
             R.id.box_three -> view.setBackgroundResource(android.R.color.holo_green_light)
-            R.id.box_four-> view.setBackgroundResource(android.R.color.holo_green_dark)
-            R.id.box_five-> view.setBackgroundResource(android.R.color.holo_green_light)
+            R.id.box_four-> view.setBackgroundResource(android.R.color.holo_orange_light)
+            R.id.box_five-> view.setBackgroundResource(android.R.color.black)
 
-            else -> view.setBackgroundColor(Color.LTGRAY)
+            else -> view.setBackgroundColor(Color.rgb(Random.nextInt(256), Random.nextInt(256), Random.nextInt(256)))
         }
     }
 }
