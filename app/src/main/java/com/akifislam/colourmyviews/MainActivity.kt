@@ -14,20 +14,22 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun setListeners(){
-        val clickableViews: List<View> =
-            listOf(
-                box_one_text,
-                box_two_text,
-                box_three_text,
-                box_four_text,
-                box_five_text,
-                constraint_layout)
-        for (item in clickableViews) {
-            item.setOnClickListener { makeColored(it) }
-        }
+        val box_text_one: View = findViewById(R.id.box_one)
+        val box_text_two: View = findViewById(R.id.box_two)
+        val box_text_three: View = findViewById(R.id.box_three)
+        val box_text_four: View = findViewById(R.id.box_four)
+        val box_text_five: View = findViewById(R.id.box_five)
+        val constraint_layout: View = findViewById(R.id.constraint_layout)
 
+        val clickableViews: List<View> =
+            listOf(box_text_one, box_text_two, box_text_three, box_text_four, box_text_five, constraint_layout)
+
+        for(item in clickableViews) {
+            item.setOnClickListener{makeColored(it)}
+        }
     }
-    fun makeColored(view: View) {
+
+    private fun makeColored(view: View) {
         when (view.id) {
             // Boxes using Color class colors for background
             R.id.box_one -> view.setBackgroundColor(Color.DKGRAY)
