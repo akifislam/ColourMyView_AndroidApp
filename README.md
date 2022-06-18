@@ -13,5 +13,5 @@
 ## Preview
 - Pressing the buttons and background may show like the GIF below : 
 <p align="center"> 
-  <img src="./ColourMyViewSample.gif" width="291" height="624"> 
+  <img src="./ColourMyViewSample.gif" width="242" height="520"> 
 </p>
